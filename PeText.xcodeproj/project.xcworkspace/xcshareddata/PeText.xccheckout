@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C3486532-640D-49FA-AA28-178C5371657B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PeText</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9754B6CE97AFB9BACA5CFAECBA978AE6D17BAAD9</key>
+		<string>https://github.com/raytlin/PeText</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PeText.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9754B6CE97AFB9BACA5CFAECBA978AE6D17BAAD9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/raytlin/PeText</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9754B6CE97AFB9BACA5CFAECBA978AE6D17BAAD9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9754B6CE97AFB9BACA5CFAECBA978AE6D17BAAD9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PeText</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -35,6 +35,9 @@
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [self.tableView addGestureRecognizer:gestureRecognizer];
     
+    //set the title bar to petID
+    [self setTitle:self.petID];
+    
     // temporarily set values in messages array. will delete later
     PETMessage *messageOne = [[PETMessage alloc]initAsOwnWithMessage:@"this is one message"];
     PETMessage *messageTwo = [[PETMessage alloc]initAsOwnWithMessage:@"this is another message"];
