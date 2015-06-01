@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71C72DB21B1B9CDA00F0E434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DB11B1B9CDA00F0E434 /* main.m */; };
+		71C72DB51B1B9CDA00F0E434 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DB41B1B9CDA00F0E434 /* AppDelegate.m */; };
+		71C72DBB1B1B9CDA00F0E434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C72DB91B1B9CDA00F0E434 /* Main.storyboard */; };
+		71C72DBD1B1B9CDA00F0E434 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C72DBC1B1B9CDA00F0E434 /* Images.xcassets */; };
+		71C72DC01B1B9CDA00F0E434 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C72DBE1B1B9CDA00F0E434 /* LaunchScreen.xib */; };
+		71C72DCC1B1B9CDB00F0E434 /* PeTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DCB1B1B9CDB00F0E434 /* PeTextTests.m */; };
+		71C72DD71B1B9E1300F0E434 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DD61B1B9E1300F0E434 /* LoginViewController.m */; };
+		71C72DDA1B1BA32200F0E434 /* MessagingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DD91B1BA32200F0E434 /* MessagingTableViewController.m */; };
+		71C72DE01B1C037500F0E434 /* PETMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DDF1B1C037500F0E434 /* PETMessage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71C72DC61B1B9CDB00F0E434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71C72DA41B1B9CDA00F0E434 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71C72DAB1B1B9CDA00F0E434;
+			remoteInfo = PeText;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71C72DAC1B1B9CDA00F0E434 /* PeText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C72DB01B1B9CDA00F0E434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C72DB11B1B9CDA00F0E434 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71C72DB31B1B9CDA00F0E434 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		71C72DB41B1B9CDA00F0E434 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		71C72DBA1B1B9CDA00F0E434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71C72DBC1B1B9CDA00F0E434 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		71C72DBF1B1B9CDA00F0E434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		71C72DC51B1B9CDB00F0E434 /* PeTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C72DCA1B1B9CDB00F0E434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C72DCB1B1B9CDB00F0E434 /* PeTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeTextTests.m; sourceTree = "<group>"; };
+		71C72DD51B1B9E1300F0E434 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		71C72DD61B1B9E1300F0E434 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		71C72DD81B1BA32200F0E434 /* MessagingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagingTableViewController.h; sourceTree = "<group>"; };
+		71C72DD91B1BA32200F0E434 /* MessagingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingTableViewController.m; sourceTree = "<group>"; };
+		71C72DDE1B1C037500F0E434 /* PETMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PETMessage.h; sourceTree = "<group>"; };
+		71C72DDF1B1C037500F0E434 /* PETMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PETMessage.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71C72DA91B1B9CDA00F0E434 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C72DC21B1B9CDB00F0E434 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71C72DA31B1B9CDA00F0E434 = {
+			isa = PBXGroup;
+			children = (
+				71C72DAE1B1B9CDA00F0E434 /* PeText */,
+				71C72DC81B1B9CDB00F0E434 /* PeTextTests */,
+				71C72DAD1B1B9CDA00F0E434 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71C72DAD1B1B9CDA00F0E434 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71C72DAC1B1B9CDA00F0E434 /* PeText.app */,
+				71C72DC51B1B9CDB00F0E434 /* PeTextTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71C72DAE1B1B9CDA00F0E434 /* PeText */ = {
+			isa = PBXGroup;
+			children = (
+				71C72DB31B1B9CDA00F0E434 /* AppDelegate.h */,
+				71C72DB41B1B9CDA00F0E434 /* AppDelegate.m */,
+				71C72DB91B1B9CDA00F0E434 /* Main.storyboard */,
+				71C72DD81B1BA32200F0E434 /* MessagingTableViewController.h */,
+				71C72DD91B1BA32200F0E434 /* MessagingTableViewController.m */,
+				71C72DDE1B1C037500F0E434 /* PETMessage.h */,
+				71C72DDF1B1C037500F0E434 /* PETMessage.m */,
+				71C72DD51B1B9E1300F0E434 /* LoginViewController.h */,
+				71C72DD61B1B9E1300F0E434 /* LoginViewController.m */,
+				71C72DBC1B1B9CDA00F0E434 /* Images.xcassets */,
+				71C72DBE1B1B9CDA00F0E434 /* LaunchScreen.xib */,
+				71C72DAF1B1B9CDA00F0E434 /* Supporting Files */,
+			);
+			path = PeText;
+			sourceTree = "<group>";
+		};
+		71C72DAF1B1B9CDA00F0E434 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71C72DB01B1B9CDA00F0E434 /* Info.plist */,
+				71C72DB11B1B9CDA00F0E434 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71C72DC81B1B9CDB00F0E434 /* PeTextTests */ = {
+			isa = PBXGroup;
+			children = (
+				71C72DCB1B1B9CDB00F0E434 /* PeTextTests.m */,
+				71C72DC91B1B9CDB00F0E434 /* Supporting Files */,
+			);
+			path = PeTextTests;
+			sourceTree = "<group>";
+		};
+		71C72DC91B1B9CDB00F0E434 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71C72DCA1B1B9CDB00F0E434 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71C72DAB1B1B9CDA00F0E434 /* PeText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C72DCF1B1B9CDB00F0E434 /* Build configuration list for PBXNativeTarget "PeText" */;
+			buildPhases = (
+				71C72DA81B1B9CDA00F0E434 /* Sources */,
+				71C72DA91B1B9CDA00F0E434 /* Frameworks */,
+				71C72DAA1B1B9CDA00F0E434 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PeText;
+			productName = PeText;
+			productReference = 71C72DAC1B1B9CDA00F0E434 /* PeText.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71C72DC41B1B9CDB00F0E434 /* PeTextTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C72DD21B1B9CDB00F0E434 /* Build configuration list for PBXNativeTarget "PeTextTests" */;
+			buildPhases = (
+				71C72DC11B1B9CDB00F0E434 /* Sources */,
+				71C72DC21B1B9CDB00F0E434 /* Frameworks */,
+				71C72DC31B1B9CDB00F0E434 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71C72DC71B1B9CDB00F0E434 /* PBXTargetDependency */,
+			);
+			name = PeTextTests;
+			productName = PeTextTests;
+			productReference = 71C72DC51B1B9CDB00F0E434 /* PeTextTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71C72DA41B1B9CDA00F0E434 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = BananaFoundation;
+				TargetAttributes = {
+					71C72DAB1B1B9CDA00F0E434 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					71C72DC41B1B9CDB00F0E434 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 71C72DAB1B1B9CDA00F0E434;
+					};
+				};
+			};
+			buildConfigurationList = 71C72DA71B1B9CDA00F0E434 /* Build configuration list for PBXProject "PeText" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71C72DA31B1B9CDA00F0E434;
+			productRefGroup = 71C72DAD1B1B9CDA00F0E434 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71C72DAB1B1B9CDA00F0E434 /* PeText */,
+				71C72DC41B1B9CDB00F0E434 /* PeTextTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71C72DAA1B1B9CDA00F0E434 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C72DBB1B1B9CDA00F0E434 /* Main.storyboard in Resources */,
+				71C72DC01B1B9CDA00F0E434 /* LaunchScreen.xib in Resources */,
+				71C72DBD1B1B9CDA00F0E434 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C72DC31B1B9CDB00F0E434 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71C72DA81B1B9CDA00F0E434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C72DD71B1B9E1300F0E434 /* LoginViewController.m in Sources */,
+				71C72DB51B1B9CDA00F0E434 /* AppDelegate.m in Sources */,
+				71C72DE01B1C037500F0E434 /* PETMessage.m in Sources */,
+				71C72DDA1B1BA32200F0E434 /* MessagingTableViewController.m in Sources */,
+				71C72DB21B1B9CDA00F0E434 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C72DC11B1B9CDB00F0E434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C72DCC1B1B9CDB00F0E434 /* PeTextTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71C72DC71B1B9CDB00F0E434 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71C72DAB1B1B9CDA00F0E434 /* PeText */;
+			targetProxy = 71C72DC61B1B9CDB00F0E434 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71C72DB91B1B9CDA00F0E434 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71C72DBA1B1B9CDA00F0E434 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71C72DBE1B1B9CDA00F0E434 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71C72DBF1B1B9CDA00F0E434 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71C72DCD1B1B9CDB00F0E434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		71C72DCE1B1B9CDB00F0E434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71C72DD01B1B9CDB00F0E434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PeText/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71C72DD11B1B9CDB00F0E434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PeText/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		71C72DD31B1B9CDB00F0E434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PeTextTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeText.app/PeText";
+			};
+			name = Debug;
+		};
+		71C72DD41B1B9CDB00F0E434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PeTextTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeText.app/PeText";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71C72DA71B1B9CDA00F0E434 /* Build configuration list for PBXProject "PeText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C72DCD1B1B9CDB00F0E434 /* Debug */,
+				71C72DCE1B1B9CDB00F0E434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C72DCF1B1B9CDB00F0E434 /* Build configuration list for PBXNativeTarget "PeText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C72DD01B1B9CDB00F0E434 /* Debug */,
+				71C72DD11B1B9CDB00F0E434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		71C72DD21B1B9CDB00F0E434 /* Build configuration list for PBXNativeTarget "PeTextTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C72DD31B1B9CDB00F0E434 /* Debug */,
+				71C72DD41B1B9CDB00F0E434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71C72DA41B1B9CDA00F0E434 /* Project object */;
+}
