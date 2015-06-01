@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //initialize the messages array
+    self.messages = [[NSMutableArray alloc]init];
+    
     //get rid of the lines on the tableView
     self.tableView.separatorColor = [UIColor clearColor];
     
@@ -38,16 +41,6 @@
     //set the title bar to petID
     [self setTitle:self.petID];
     
-    // temporarily set values in messages array. will delete later
-    PETMessage *messageOne = [[PETMessage alloc]initAsOwnWithMessage:@"this is one message"];
-    PETMessage *messageTwo = [[PETMessage alloc]initAsOwnWithMessage:@"this is another message"];
-    PETMessage* messageThreee = [[PETMessage alloc]init];
-    messageThreee.text = @"third message";
-    messageThreee.ownMessage = NO;
-    
-    self.messages = [NSMutableArray arrayWithObjects:messageOne, messageTwo, nil];
-    
-    [self.messages addObject:messageThreee];
 
 }
 
