@@ -13,7 +13,7 @@
 -(instancetype)initAsOwnWithMessage:(NSString*)message{
     self = [super init];
     _text = message;
-    _ownMessage = YES;
+    _humanMessage = YES;
     return self;
 }
 

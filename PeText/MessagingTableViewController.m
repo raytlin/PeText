@@ -5,6 +5,7 @@
 //  Created by Ray Lin on 5/31/15.
 //  Copyright (c) 2015 BananaFoundation. All rights reserved.
 //
+#import <Firebase/Firebase.h>
 
 #import "MessagingTableViewController.h"
 #import "PETMessage.h"
@@ -52,12 +53,17 @@
     
     //need to refresh table view after adding new message. Should this go somewhere else?
     [self.tableView reloadData];
+    
+    //scrolls to bottom of the page when new message comes in. maybe this should be put somewhere else
+    NSIndexPath* ipath = [NSIndexPath indexPathForRow: [self.messages count]-1
+                                            inSection: 0];
+    [self.tableView scrollToRowAtIndexPath: ipath atScrollPosition: UITableViewScrollPositionTop animated: YES];
 }
 
 #pragma mark - Keyboard stuff
 
 
-//sending message on return
+//sending message when press return on the keyboard
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     if (![textField.text isEqualToString:@""]) {
         [self sendMessage:textField.text];
@@ -87,7 +93,7 @@
     
 }
 
-// Called when the UIKeyboardDidShowNotification is sent.
+// Called when the UIKeyboardDidShowNotification is sent to change the size of the mainview to exclude the keyboard.
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
@@ -128,7 +134,7 @@
     UILabel* yourMessage = (UILabel*)[cell viewWithTag:2];
     
     PETMessage* message = self.messages[indexPath.row];
-    if (message.ownMessage) {
+    if (message.humanMessage) {
         yourMessage.text = message.text;
     }else{
         theirMessage.text = message.text;

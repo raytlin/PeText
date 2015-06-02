@@ -11,7 +11,7 @@
 @interface PETMessage : NSObject
 
 @property (nonatomic, strong) NSString * text;
-@property (nonatomic) BOOL ownMessage;
+@property (nonatomic) BOOL humanMessage;
 
 
 -(instancetype)initAsOwnWithMessage:(NSString*)message;
