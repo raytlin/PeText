@@ -222,17 +222,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbr-I6-PSL">
-                                <rect key="frame" x="0.0" y="448" width="290" height="152"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="bfD-wW-9wu"/>
-                                    <constraint firstAttribute="width" constant="290" id="fTt-iW-jBc"/>
-                                </constraints>
-                                <state key="normal" title="Bark">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPG-xM-DFU">
                                 <rect key="frame" x="310" y="448" width="290" height="152"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,6 +232,9 @@
                                 <state key="normal" title="Woof">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="woofButtonPressed:" destination="img-yY-Yny" eventType="touchUpInside" id="gZO-EL-91w"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-OV-yz9">
                                 <rect key="frame" x="0.0" y="64" width="600" height="382"/>
@@ -281,6 +273,20 @@
                                     <outlet property="delegate" destination="img-yY-Yny" id="lZ7-YN-GzO"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbr-I6-PSL">
+                                <rect key="frame" x="0.0" y="448" width="290" height="152"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="bfD-wW-9wu"/>
+                                    <constraint firstAttribute="width" constant="290" id="fTt-iW-jBc"/>
+                                </constraints>
+                                <state key="normal" title="Bark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="barkButtonPressed:" destination="img-yY-Yny" eventType="touchUpInside" id="sOf-OC-FKb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

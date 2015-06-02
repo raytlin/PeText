@@ -81,13 +81,30 @@
     }
 
 }
+- (IBAction)woofButtonPressed:(id)sender {
+    [self sendMessage:@"woof"];
+}
+- (IBAction)barkButtonPressed:(id)sender {
+    [self sendMessage:@"bark"];
+}
 
 -(void)sendMessage:(NSString*)text{
     
     //firebase can only append nsdictionarys so adding the array numbers manually
-    NSDictionary * message = @{@"text" : text, @"humanMessage" : @YES};
-    NSString *arrayCount = [NSString stringWithFormat:@"%lu",[self.messages count] + 1];
+    NSDictionary * message;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        message = @{@"text" : text, @"humanMessage" : @NO};
+    }else{
+        message = @{@"text" : text, @"humanMessage" : @YES};
+    }
     
+    //array count has to start with 0
+    NSString * arrayCount;
+    if ([self.messages count] == 0) {
+        arrayCount = @"0";
+    }else {
+        arrayCount = [NSString stringWithFormat:@"%u",[self.messages count] + 1];
+    }
     //send messages to firebase by appending to the end
     NSDictionary *messageDict = @{arrayCount: message};
     [self.firebase updateChildValues:messageDict];
@@ -101,9 +118,14 @@
     [self.tableView reloadData];
     
     //scrolls to bottom of the page when new message comes in.
-    NSIndexPath* ipath = [NSIndexPath indexPathForRow: [self.messages count]-1
-                                            inSection: 0];
-    [self.tableView scrollToRowAtIndexPath: ipath atScrollPosition: UITableViewScrollPositionTop animated: YES];
+    
+    NSIndexPath* ipath;
+    if ([self.messages count] != 0) {
+        ipath = [NSIndexPath indexPathForRow: [self.messages count]-1
+                                   inSection: 0];
+        [self.tableView scrollToRowAtIndexPath: ipath atScrollPosition: UITableViewScrollPositionTop animated: YES];
+    }
+    
 }
 
 #pragma mark - Keyboard stuff
@@ -181,14 +203,14 @@
     
     if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad) {
         NSDictionary* message = self.messages[indexPath.row];
-        if (!message[@"humanMessage"]) {
+        if ([message[@"humanMessage"] boolValue]==NO) {
             yourMessage.text = message[@"text"];
         }else{
             theirMessage.text = message[@"text"];
         }
     }else{
         NSDictionary* message = self.messages[indexPath.row];
-        if (message[@"humanMessage"]) {
+        if ([message[@"humanMessage"] boolValue]) {
             yourMessage.text = message[@"text"];
         }else{
             theirMessage.text = message[@"text"];
