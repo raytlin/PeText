@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DB9CCB5F4AE0D8AC364A710 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2379D5E870E9D817B3C4F9EC /* libPods.a */; };
+		715612C41B1D6D6C00B9C263 /* PawPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715612C31B1D6D6C00B9C263 /* PawPassViewController.m */; };
 		71C72DB21B1B9CDA00F0E434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DB11B1B9CDA00F0E434 /* main.m */; };
 		71C72DB51B1B9CDA00F0E434 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C72DB41B1B9CDA00F0E434 /* AppDelegate.m */; };
 		71C72DBB1B1B9CDA00F0E434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C72DB91B1B9CDA00F0E434 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		2379D5E870E9D817B3C4F9EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		715612C21B1D6D6C00B9C263 /* PawPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PawPassViewController.h; sourceTree = "<group>"; };
+		715612C31B1D6D6C00B9C263 /* PawPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PawPassViewController.m; sourceTree = "<group>"; };
 		71C72DAC1B1B9CDA00F0E434 /* PeText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C72DB01B1B9CDA00F0E434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C72DB11B1B9CDA00F0E434 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				71C72DB31B1B9CDA00F0E434 /* AppDelegate.h */,
 				71C72DB41B1B9CDA00F0E434 /* AppDelegate.m */,
 				71C72DB91B1B9CDA00F0E434 /* Main.storyboard */,
+				715612C21B1D6D6C00B9C263 /* PawPassViewController.h */,
+				715612C31B1D6D6C00B9C263 /* PawPassViewController.m */,
 				71C72DD81B1BA32200F0E434 /* MessagingTableViewController.h */,
 				71C72DD91B1BA32200F0E434 /* MessagingTableViewController.m */,
 				71C72DDE1B1C037500F0E434 /* PETMessage.h */,
@@ -204,6 +209,7 @@
 				TargetAttributes = {
 					71C72DAB1B1B9CDA00F0E434 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = ZGB6U692DK;
 					};
 					71C72DC41B1B9CDB00F0E434 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -288,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				715612C41B1D6D6C00B9C263 /* PawPassViewController.m in Sources */,
 				71C72DD71B1B9E1300F0E434 /* LoginViewController.m in Sources */,
 				71C72DB51B1B9CDA00F0E434 /* AppDelegate.m in Sources */,
 				71C72DE01B1C037500F0E434 /* PETMessage.m in Sources */,
@@ -419,9 +426,12 @@
 			baseConfigurationReference = A7426C187F8483C0F0573E4E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PeText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -431,9 +441,12 @@
 			baseConfigurationReference = 875FA1935805656DAE1C4B09 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PeText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

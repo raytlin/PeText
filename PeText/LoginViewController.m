@@ -37,7 +37,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //check if ipad
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        //popup the paw-pass
+        [self performSegueWithIdentifier:@"presentPawPass" sender:self];
+    }
 }
 
 

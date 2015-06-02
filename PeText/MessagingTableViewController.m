@@ -72,6 +72,15 @@
 }
 
 #pragma mark - Messaging
+- (IBAction)sendButtonPressed:(id)sender {
+    if (![self.messageTextfield.text isEqualToString:@""]) {
+        [self sendMessage:self.messageTextfield.text];
+        self.messageTextfield.text = @"";
+    } else{
+        [self.messageTextfield resignFirstResponder];
+    }
+
+}
 
 -(void)sendMessage:(NSString*)text{
     
