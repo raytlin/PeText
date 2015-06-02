@@ -54,7 +54,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     //for seg to message view, pass the pet ID to message view
-    if ([segue.identifier isEqualToString:@"goToMessagingTableView"]) {
+    if ([segue.identifier isEqualToString:@"goToMessagingTableView"]||[segue.identifier isEqualToString:@"goToPetMessagingViewController"]) {
         MessagingTableViewController* mtvc = [segue destinationViewController];
         mtvc.petID = self.petIDTextfield.text;
     }

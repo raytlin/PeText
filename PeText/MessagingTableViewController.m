@@ -179,14 +179,21 @@
     UILabel* theirMessage = (UILabel*)[cell viewWithTag:1];
     UILabel* yourMessage = (UILabel*)[cell viewWithTag:2];
     
-    
-    NSDictionary* message = self.messages[indexPath.row];
-    if (message[@"humanMessage"]) {
-        yourMessage.text = message[@"text"];
+    if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad) {
+        NSDictionary* message = self.messages[indexPath.row];
+        if (!message[@"humanMessage"]) {
+            yourMessage.text = message[@"text"];
+        }else{
+            theirMessage.text = message[@"text"];
+        }
     }else{
-        theirMessage.text = message[@"text"];
+        NSDictionary* message = self.messages[indexPath.row];
+        if (message[@"humanMessage"]) {
+            yourMessage.text = message[@"text"];
+        }else{
+            theirMessage.text = message[@"text"];
+        }
     }
-    
     return cell;
 }
 
