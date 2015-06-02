@@ -5,10 +5,11 @@
 //  Created by Ray Lin on 5/31/15.
 //  Copyright (c) 2015 BananaFoundation. All rights reserved.
 //
-#import <Firebase/Firebase.h>
 
 #import "MessagingTableViewController.h"
 #import "PETMessage.h"
+
+#define firebaseStore @"https://vivid-inferno-5447.firebaseio.com/"
 
 @interface MessagingTableViewController ()
 
@@ -26,6 +27,10 @@
     //initialize the messages array
     self.messages = [[NSMutableArray alloc]init];
     
+    //initialize firebase
+    Firebase *initalFirebase = [[Firebase alloc]initWithUrl:firebaseStore];
+    self.firebase = [initalFirebase childByAppendingPath:self.petID];
+    
     //get rid of the lines on the tableView
     self.tableView.separatorColor = [UIColor clearColor];
     
@@ -42,19 +47,51 @@
     //set the title bar to petID
     [self setTitle:self.petID];
     
+    
+    // This allows us to check if these were messages already stored on the server
+    // when we booted up (YES) or if they are new messages since we've started the app.
+    // This is so that we can batch together the initial messages' reloadData for a perf gain.
+    __block BOOL initialAdds = YES;
+    
+    //getting all the messages already there for each pet ID to do the inital message load and all subsequent adds
+    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        // Add the chat message to the array.
+        [self.messages addObject:snapshot.value];
+        // Reload the table view so the new message will show up.
+        if (!initialAdds) {
+            [self refreshTable];
+        }
+    }];
+    
+    [self.firebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        // Reload the table view so that the intial messages show up
+        [self.tableView reloadData];
+        initialAdds = NO;
+    }];
 
 }
 
 #pragma mark - Messaging
 
 -(void)sendMessage:(NSString*)text{
-    PETMessage* message = [[PETMessage alloc]initAsOwnWithMessage:text];
-    [self.messages addObject:message];
     
-    //need to refresh table view after adding new message. Should this go somewhere else?
+    //firebase can only append nsdictionarys so adding the array numbers manually
+    NSDictionary * message = @{@"text" : text, @"humanMessage" : @YES};
+    NSString *arrayCount = [NSString stringWithFormat:@"%lu",[self.messages count] + 1];
+    
+    //send messages to firebase by appending to the end
+    NSDictionary *messageDict = @{arrayCount: message};
+    [self.firebase updateChildValues:messageDict];
+    
+    [self refreshTable];
+    
+}
+
+-(void)refreshTable{
+    //need to refresh table view after adding new message.
     [self.tableView reloadData];
     
-    //scrolls to bottom of the page when new message comes in. maybe this should be put somewhere else
+    //scrolls to bottom of the page when new message comes in.
     NSIndexPath* ipath = [NSIndexPath indexPathForRow: [self.messages count]-1
                                             inSection: 0];
     [self.tableView scrollToRowAtIndexPath: ipath atScrollPosition: UITableViewScrollPositionTop animated: YES];
@@ -133,11 +170,12 @@
     UILabel* theirMessage = (UILabel*)[cell viewWithTag:1];
     UILabel* yourMessage = (UILabel*)[cell viewWithTag:2];
     
-    PETMessage* message = self.messages[indexPath.row];
-    if (message.humanMessage) {
-        yourMessage.text = message.text;
+    //PETMessage* message = self.messages[indexPath.row];
+    NSDictionary* message = self.messages[indexPath.row];
+    if (message[@"humanMessage"]) {
+        yourMessage.text = message[@"text"];
     }else{
-        theirMessage.text = message.text;
+        theirMessage.text = message[@"text"];
     }
     
     return cell;

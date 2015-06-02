@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Firebase/Firebase.h>
 
 @interface MessagingTableViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString * petID;
 @property (nonatomic, strong) NSMutableArray * messages;
+@property (nonatomic, strong) Firebase * firebase;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation PETMessage
 
--(instancetype)initAsOwnWithMessage:(NSString*)message{
+-(instancetype)initAsHumanWithMessage:(NSString*)message{
     self = [super init];
     _text = message;
     _humanMessage = YES;

@@ -14,6 +14,6 @@
 @property (nonatomic) BOOL humanMessage;
 
 
--(instancetype)initAsOwnWithMessage:(NSString*)message;
+-(instancetype)initAsHumanWithMessage:(NSString*)message;
 
 @end
