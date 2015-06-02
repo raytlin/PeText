@@ -21,7 +21,11 @@
     //check if the pet ID is filled out, then do the segue to the messaging view
     //The pet ID is passed to the messaging view usong prepareForSegue
     if (![self.petIDTextfield.text isEqualToString:@""]) {
-        [self performSegueWithIdentifier:@"goToMessagingTableView" sender:self];
+        if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad) {
+            [self performSegueWithIdentifier:@"goToPetMessagingViewController" sender:self];
+        }else{
+            [self performSegueWithIdentifier:@"goToMessagingTableView" sender:self];
+        }
     }else{
         UIAlertController * loginAlert = [UIAlertController alertControllerWithTitle:@"" message:@"You need to enter a valid Pet ID, of course" preferredStyle:UIAlertControllerStyleAlert];
         [loginAlert addAction:[UIAlertAction actionWithTitle:@"Ima Dummy" style:UIAlertActionStyleDefault handler:nil]];

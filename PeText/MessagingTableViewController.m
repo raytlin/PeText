@@ -179,7 +179,7 @@
     UILabel* theirMessage = (UILabel*)[cell viewWithTag:1];
     UILabel* yourMessage = (UILabel*)[cell viewWithTag:2];
     
-    //PETMessage* message = self.messages[indexPath.row];
+    
     NSDictionary* message = self.messages[indexPath.row];
     if (message[@"humanMessage"]) {
         yourMessage.text = message[@"text"];
