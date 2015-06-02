@@ -103,13 +103,13 @@
     if ([self.messages count] == 0) {
         arrayCount = @"0";
     }else {
-        arrayCount = [NSString stringWithFormat:@"%u",[self.messages count] + 1];
+        arrayCount = [NSString stringWithFormat:@"%lu",(unsigned long)[self.messages count]];
     }
     //send messages to firebase by appending to the end
     NSDictionary *messageDict = @{arrayCount: message};
     [self.firebase updateChildValues:messageDict];
     
-    [self refreshTable];
+    //[self refreshTable];
     
 }
 
@@ -201,16 +201,19 @@
     UILabel* theirMessage = (UILabel*)[cell viewWithTag:1];
     UILabel* yourMessage = (UILabel*)[cell viewWithTag:2];
     
+    yourMessage.text = @"";
+    theirMessage.text = @"";
+    
     if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad) {
         NSDictionary* message = self.messages[indexPath.row];
-        if ([message[@"humanMessage"] boolValue]==NO) {
+        if ([message[@"humanMessage"] boolValue] == NO) {
             yourMessage.text = message[@"text"];
         }else{
             theirMessage.text = message[@"text"];
         }
     }else{
         NSDictionary* message = self.messages[indexPath.row];
-        if ([message[@"humanMessage"] boolValue]) {
+        if ([message[@"humanMessage"] boolValue] == YES) {
             yourMessage.text = message[@"text"];
         }else{
             theirMessage.text = message[@"text"];
